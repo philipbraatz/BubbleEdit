@@ -88,6 +88,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="draglabel.cpp" />
+    <ClCompile Include="dragwidget.cpp" />
     <ClCompile Include="Editor.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -95,13 +97,17 @@
     <QtMoc Include="Editor.h" />
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="Editor.ui" />
-  </ItemGroup>
-  <ItemGroup>
     <QtRcc Include="Editor.qrc" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="doorfail.BubbleEdit.qtUI.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="editor.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="draglabel.h" />
+    <ClInclude Include="dragwidget.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

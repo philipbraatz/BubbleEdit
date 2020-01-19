@@ -10,6 +10,9 @@ class Editor : public QMainWindow
 public:
 	Editor(QWidget *parent = Q_NULLPTR);
 
+public slots:
+	void onButtonClicked();
+
 private:
 	Ui::EditorClass ui;
 
@@ -17,4 +20,10 @@ private:
 	{
 		QApplication::exit();
 	}
+
+protected:
+	void dragEnterEvent(QDragEnterEvent* event) override;
+	void dragMoveEvent(QDragMoveEvent* event) override;
+	void dropEvent(QDropEvent* event) override;
+	void mousePressEvent(QMouseEvent* event) override;
 };
